@@ -1,0 +1,95 @@
+/* ================= ORDER & STATISTIC CUSTOM STYLES ================= */
+
+/* Tiện ích cơ bản */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.mt-20 { margin-top: 20px; }
+.mt-40 { margin-top: 40px; }
+
+/* Nút bấm */
+.btn-back-custom { margin-bottom: 0; }
+.save-btn-full { width: 100%; }
+
+/* Bảng hiển thị */
+.phone-text { font-size: 13px; color: #666; display: block; margin-top: 4px; }
+.price-text { color: #FFA629; font-weight: bold; }
+
+.status-badge { padding: 5px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; display: inline-block; }
+.status-pending { background-color: #fff3e0; color: #e65100; }
+.status-completed { background-color: #e8f5e9; color: #2e7d32; }
+.status-canceled { background-color: #ffebee; color: #c62828; }
+
+.table-qty { font-size: 20px; font-weight: bold; text-align: center; }
+.total-row { background-color: #fffaf2; }
+.total-label { font-size: 20px; text-align: right; font-weight: bold; }
+.total-value { font-size: 24px; font-weight: bold; color: #FFA629; }
+
+/* Chi tiết đơn hàng */
+.order-detail-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.order-info-col { flex: 1; min-width: 300px; }
+.order-info-title { color: #FFA629; font-size: 26px; margin-bottom: 10px; text-transform: uppercase; }
+.order-info-line { border: 1px solid #FFB4335C; margin-bottom: 25px; }
+.order-info-row { margin-bottom: 20px; font-size: 20px; }
+.order-info-label { display: inline-block; width: 160px; color: #4d3b2f; font-weight: bold; }
+.order-info-value { color: #666; }
+
+.order-status-col {
+    width: 320px;
+    background: #FFB4331A;
+    padding: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+.order-status-title { 
+    color: #FFA629; 
+    font-size: 20px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    font-weight: bold; 
+}
+.order-status-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+.order-status-select {
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 1px solid #FFA629;
+    outline: none;
+    font-size: 16px;
+    font-family: inherit;
+    color: #444;
+    width: 100%;
+    cursor: pointer;
+    background-color: white; 
+}
+.save-btn-compact { 
+    width: 100%; 
+    padding: 12px; 
+    font-size: 18px; 
+    border-radius: 20px;
+    background: #FFA629;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+    font-weight: bold;
+}
+.save-btn-compact:hover {
+    background: #ffb433;
+    transform: scale(1.02);
+}

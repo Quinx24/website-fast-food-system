@@ -1,0 +1,412 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#fff5e4;
+    font-family:'STIX Two Text', serif;
+}
+
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar{
+    width:260px;
+    background:#FFB4335C;
+    padding:30px 20px;
+    position:relative;
+    border-radius:0 0 20px 0;
+}
+
+.logo{
+    text-align:center;
+    font-size:52px;
+    color:#FFA629;
+    font-family:'Lobster', cursive;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:25px;
+}
+
+.menu a{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#FFA629;
+    font-size:25px;
+    font-weight:600;
+    transition:0.3s;
+    position:relative;
+}
+
+.menu a:hover{
+    transform:translateX(5px);
+}
+
+.menu img{
+    width:32px;
+    height:32px;
+    object-fit:contain;
+}
+
+.menu a.active::after{
+    content:'';
+    position:absolute;
+    left:50%;
+    bottom:-6px;
+    transform:translateX(-50%);
+    width:50%;
+    height:3px;
+    background:white;
+    border-radius:50px;
+}
+
+.logout{
+    position:absolute;
+    bottom:40px;
+    left:20px;
+    right:20px;
+}
+
+.logout-text a{
+    font-size:25px !important;
+}
+
+/* ================= CONTENT ================= */
+
+.content{
+    flex:1;
+    padding:35px 50px;
+}
+
+.search-box{
+    width:300px;
+    height:45px;
+    background:white;
+    border-radius:30px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    background:transparent;
+    font-size:16px;
+    color:#f39c12;
+    font-family:'Lobster', cursive;
+}
+
+.search-box input::placeholder{
+    color:#ffd898;
+    font-family:'Lobster', cursive;
+}
+
+.search-box img{
+    width:26px;
+}
+
+.search-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+/* ================= CARD (THỐNG KÊ) ================= */
+
+.cards{
+    margin-top:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:55px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    height:400px;
+    background:#FFB4331A;
+    border-radius:30px;
+    padding:20px;
+    position:relative;
+}
+
+.card-inner{
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    background:#ffe1ac;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+}
+
+.number{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:45px;
+    font-weight:bold;
+    color:#4d3b2f;
+    font-style:italic;
+}
+
+.card img{
+    width:130px;
+    margin-bottom:20px;
+}
+
+.card-title{
+    font-size:30px;
+    font-weight:700;
+}
+
+/* ================= CUSTOMER & TABLE ================= */
+
+.customer-title{
+    color:#FFA629;
+    font-size:30px;
+    margin-top:30px;
+    margin-bottom:25px;
+}
+
+.add-btn{
+    display:inline-block;
+    background:#FFB4335C;
+    color:#FFA629;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:30px;
+    font-size:18px;
+    margin-bottom:30px;
+    transition:0.3s;
+}
+
+.add-btn:hover{
+    background:#ffb433;
+    color:white;
+}
+
+.table-box{
+    width:100%;
+    overflow-x:auto;
+}
+
+.customer-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.customer-table thead{
+    background:#FFB4335C;
+}
+
+.customer-table th{
+    padding:20px;
+    color:#FFA629;
+    font-size:18px;
+}
+
+.customer-table td{
+    padding:20px;
+    text-align:center;
+    border-bottom:2px solid #FFA629;
+    color:#444;
+}
+
+.edit-btn{
+    text-decoration:none;
+    background:#ffb433;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+    margin-right:8px;
+}
+
+.delete-btn{
+    text-decoration:none;
+    background:#FFA629;
+    color:white;
+    padding:8px 18px;
+    border-radius:20px;
+}
+
+.empty-text-center {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* ================= ADD CUSTOMER ================= */
+
+.add-form{
+    width:650px;
+    margin:40px auto;
+    background:#f8d89a55;
+    padding:40px;
+    border-radius:35px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group{
+    margin-bottom:25px;
+}
+
+.form-group label{
+    display:block;
+    font-size:24px;
+    color:#FFA629;
+    margin-bottom:10px;
+    font-weight:600;
+    font-family:'STIX Two Text', serif;
+}
+
+.form-group input{
+    width:100%;
+    padding:16px 20px;
+    border:none;
+    outline:none;
+    border-radius:20px;
+    background:white;
+    font-size:18px;
+    color:#444;
+    font-family:'STIX Two Text', serif;
+}
+
+.save-btn{
+    border:none;
+    background:#FFA629;
+    color:white;
+    padding:14px 40px;
+    border-radius:30px;
+    font-size:22px;
+    cursor:pointer;
+    transition:0.3s;
+    font-family:'STIX Two Text', serif;
+}
+
+.save-btn:hover{
+    background:#ffb433;
+    transform:scale(1.03);
+}
+
+.success-alert{
+    background:#d4edda;
+    color:#155724;
+    padding:15px 20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    font-size:20px;
+    font-weight:600;
+}
+
+.error-text{
+    color:red;
+    margin-top:8px;
+    font-size:18px;
+    font-weight:600;
+}
+
+/* ================= ORDER & REPORT CUSTOM STYLES ================= */
+
+/* Thanh Header danh mục */
+.category-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Tiện ích cơ bản */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.mt-20 { margin-top: 20px; }
+.mt-40 { margin-top: 40px; }
+
+/* Chữ và Tiêu đề */
+.phone-text { font-size: 13px; color: #666; display: block; margin-top: 4px; }
+.price-text { color: #FFA629; font-weight: bold; }
+.section-title { margin-bottom: 15px; color: #333; font-size: 18px; }
+.table-title { padding: 20px 20px 0; margin: 0; font-size: 18px; }
+.title-md { font-size: 20px; }
+
+/* Nút bấm (Button) */
+.btn-back { background-color: #6c757d; margin-bottom: 0; }
+.btn-back:hover { background-color: #5a6268; }
+.btn-submit { border: none; cursor: pointer; text-align: center; justify-content: center; width: 100%; margin-bottom: 0; padding: 10px; }
+
+/* Badge Trạng thái Đơn hàng */
+.status-badge { padding: 5px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; display: inline-block; }
+.status-pending { background-color: #fff3e0; color: #e65100; } /* Chờ xác nhận, Đang giao */
+.status-completed { background-color: #e8f5e9; color: #2e7d32; } /* Hoàn thành */
+.status-canceled { background-color: #ffebee; color: #c62828; } /* Đã hủy */
+
+/* Layout Chi tiết Đơn hàng */
+.order-detail-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+.order-detail-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.status-update-box {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    min-width: 300px;
+}
+.status-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.status-select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* Dòng Tổng tiền trong Table */
+.total-row { background-color: #fffaf2; }
+.total-label { font-weight: bold; font-size: 16px; }
+.total-value { font-weight: bold; color: #FFA629; font-size: 18px; }
+
+/* Thống kê */
+.number-large { font-size: 24px !important; }
+.rank-badge {
+    background: #FFA629;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.qty-text { font-weight: bold; font-size: 16px; color: #FFA629; }

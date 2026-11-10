@@ -1,0 +1,27 @@
+.category-box-long {
+    background-color: #f8d89a55;
+    padding: 40px;
+    border-radius: 15px;         
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;             
+    box-sizing: border-box;
+}
+
+.category-box-long .form-group input {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.category-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.category-btn-group .save-btn {
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}

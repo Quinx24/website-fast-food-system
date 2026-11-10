@@ -1,0 +1,75 @@
+/* ===== REGISTER ===== */
+
+.register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.register-card {
+    background: rgb(250, 207, 127);
+    padding: 40px;
+    border-radius: 30px;
+    width: 430px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.register-card h2 {
+    font-family: 'Lobster', cursive;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.register-card input {
+    font-family: 'Lobster', cursive;
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: #fdf6ec;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    color: #ff8c00;
+}
+
+
+.register-card input::placeholder {
+    color: orange;
+}
+
+.register-card button {
+    margin-top: 15px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px;
+    background: orange;
+    color: white;
+    font-family: 'Lobster';
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-card button:hover {
+    background: #ff8c00;
+}
+
+
+.auth-links {
+    color: white; 
+    margin-top: 25px;  
+}
+
+.auth-links a {
+    color: white;   
+    text-decoration: none;
+}
+
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0;
+}

@@ -1,0 +1,136 @@
+.profile-menu{
+    margin-top:100px;
+}
+
+.profile-link{
+    text-decoration:none;
+}
+
+.profile-btn{
+    width:280px;
+    background:#ffb433;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:40px;
+    margin-bottom:25px;
+
+    font-size:20px; 
+
+    font-family:Lobster;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.profile-btn.active{
+    background:white;
+    color:#ffb433;
+}
+
+
+.profile-btn:hover{
+    background:white;
+    color:#ffb433;
+    transform:scale(1.03);
+}
+
+.profile-btn:hover{
+    transform:scale(1.03);
+}
+
+.profile-title{
+    color:#ffb433;
+    font-family:'Playfair Display', serif;
+    font-size:35px;
+
+    text-align:center;
+    width:100%;
+    margin:0px auto 30px auto;
+}
+
+
+.profile-line{
+    border:1px solid #ffb433;
+    width:90%;   
+    margin-top:20px;
+    margin-bottom:50px;
+
+}
+.profile-info{
+    font-size:25px;
+    color:#ffb433;
+    line-height:60px; 
+}
+
+.profile-value{
+    margin-left:30px;
+    color:#555;
+}
+
+.edit-card{
+    max-width:700px;
+    background:#fff5e4;
+    border-radius:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+.edit-title{
+    color:#ffb433;
+    font-family:Lobster;
+    margin-bottom:40px;
+}
+
+.edit-label{
+    color:#ffb433;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.edit-input{
+    background:#f8e7c5;
+    border:none;
+    border-radius:50px !important;
+    padding:15px 20px;
+}
+
+.edit-error{
+    color:red;
+    margin-top:8px;
+    font-weight:bold;
+}
+
+.edit-btn{
+    background:#ffb433;
+    color:white;
+    border-radius:35px;
+    padding:12px 60px;
+    font-size:22px;
+    font-family:Lobster;
+    margin-top:20px;
+    border:none;
+}
+
+.edit-btn:hover{
+    opacity:0.9;
+}
+
+
+.password-box{
+    position:relative;
+    width:100%;
+}
+
+.toggle-password{
+    position:absolute;
+
+    right:20px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    z-index:10;
+}
