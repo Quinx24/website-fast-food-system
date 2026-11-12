@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+vendor
+node_modules
+public/build
+public/hot
+database/*.sqlite
+*.sql
+storage/logs/*.log
