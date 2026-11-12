@@ -45,9 +45,9 @@ Route::get('/', function (Request $request) {
 
     $category = $request->category ?? 'all';
 
-    $categories = DB::table('DanhMucSanPham')->get();
+    $categories = DB::table('danhmucsanpham')->get();
 
-    $query = DB::table('SanPham')
+    $query = DB::table('sanpham')
         ->where('TrangThai', 1);
 
     if ($category != 'all') {
@@ -69,11 +69,11 @@ Route::get('/', function (Request $request) {
 
 Route::get('/product/{id}', function ($id) {
 
-    $product = DB::table('SanPham')
+    $product = DB::table('sanpham')
         ->where('SanPhamID', $id)
         ->first();
 
-    $details = DB::table('ChiTietSanPham')
+    $details = DB::table('chitietsanpham')
         ->where('SanPhamID', $id)
         ->get();
 
@@ -94,7 +94,7 @@ Route::get('/search', function (Request $request) {
         return redirect('/');
     }
 
-    $products = DB::table('SanPham')
+    $products = DB::table('sanpham')
         ->where('TenSanPham', 'like', '%' . $keyword . '%')
         ->where('TrangThai', 1)
         ->orderBy('SanPhamID', 'desc')

@@ -9,7 +9,7 @@ class CategoryController extends Controller
     //  Trang danh sách danh mục
     public function index(Request $request) {
         $search = $request->input('search');
-        $query = DB::table('DanhMucSanPham');
+        $query = DB::table('danhmucsanpham');
         if ($search) {
             $query->where('TenDanhMuc', 'like', '%' . $search . '%');
         }
@@ -26,7 +26,7 @@ class CategoryController extends Controller
     public function store(Request $request) {
         $request->validate(['TenDanhMuc' => 'required']);
         
-        DB::table('DanhMucSanPham')->insert([
+        DB::table('danhmucsanpham')->insert([
             'TenDanhMuc' => $request->input('TenDanhMuc')
         ]);
         return redirect('/admin/category')->with('success', 'Thêm danh mục mới thành công!');
@@ -34,13 +34,13 @@ class CategoryController extends Controller
 
     //  Hiển thị form sửa
     public function edit($id) {
-        $category = DB::table('DanhMucSanPham')->where('DanhMucSanPhamID', $id)->first();
+        $category = DB::table('danhmucsanpham')->where('DanhMucSanPhamID', $id)->first();
         return view('admin.category.edit', compact('category'));
     }
 
     //  Xử lý cập nhật danh mục khi bấm nút Cập nhật
     public function update(Request $request, $id) {
-        DB::table('DanhMucSanPham')->where('DanhMucSanPhamID', $id)->update([
+        DB::table('danhmucsanpham')->where('DanhMucSanPhamID', $id)->update([
             'TenDanhMuc' => $request->TenDanhMuc
         ]);
         return redirect('/admin/category')->with('success', 'Cập nhật thành công');
@@ -48,7 +48,7 @@ class CategoryController extends Controller
 
     // Xử lý xóa danh mục
     public function delete($id) {
-        DB::table('DanhMucSanPham')->where('DanhMucSanPhamID', $id)->delete();
+        DB::table('danhmucsanpham')->where('DanhMucSanPhamID', $id)->delete();
         return redirect('/admin/category')->with('success', 'Xóa danh mục thành công!');
     }
 }
